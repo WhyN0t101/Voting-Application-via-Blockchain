@@ -2,11 +2,11 @@
 
 A secure and transparent blockchain-based voting system built with Solidity and Truffle. This smart contract serves as the **backbone infrastructure** for decentralized voting applications, ensuring immutability, transparency, and integrity in the voting process.
 
-## 🎯 Overview
+## Overview
 
 This project implements a smart contract voting system that leverages blockchain technology to create a tamper-proof voting mechanism. The contract manages candidates, tracks votes, and prevents double-voting through wallet address verification.
 
-## ✨ Features
+## Features
 
 - **Immutable Voting Records**: All votes are permanently recorded on the blockchain
 - **Transparent Results**: Vote counts are publicly verifiable and auditable
@@ -15,7 +15,7 @@ This project implements a smart contract voting system that leverages blockchain
 - **Decentralized**: No central authority can manipulate results
 - **Gas Efficient**: Optimized for minimal transaction costs
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Solidity** `>=0.4.22 <0.9.0` - Smart contract programming language
 - **Truffle** - Development framework for Ethereum
@@ -23,7 +23,7 @@ This project implements a smart contract voting system that leverages blockchain
 - **Web3.js** - JavaScript library for blockchain interaction
 - **Node.js** - JavaScript runtime environment
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
