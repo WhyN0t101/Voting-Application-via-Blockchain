@@ -1,0 +1,33 @@
+{
+  "name": "voting-application-via-blockchain",
+  "version": "1.0.0",
+  "description": "A secure and transparent blockchain-based voting system built with Solidity and Truffle",
+  "main": "index.js",
+  "scripts": {
+    "compile": "cd blockchain && truffle compile",
+    "migrate": "cd blockchain && truffle migrate --network development",
+    "migrate:reset": "cd blockchain && truffle migrate --reset --network development",
+    "test": "cd blockchain && truffle test",
+    "console": "cd blockchain && truffle console --network development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhyN0t101/voting-app.git"
+  },
+  "keywords": [
+    "blockchain",
+    "voting",
+    "ethereum",
+    "solidity",
+    "truffle",
+    "smart-contract",
+    "decentralized",
+    "web3"
+  ],
+  "author": "WhyN0t101",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhyN0t101/voting-app/issues"
+  },
+  "homepage": "https://github.com/WhyN0t101/voting-app#readme"
+}

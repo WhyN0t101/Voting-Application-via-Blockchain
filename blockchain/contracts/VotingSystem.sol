@@ -5,27 +5,27 @@ pragma solidity >=0.4.22 <0.9.0;
 contract VotingSystem {
     address public owner;
     
-    // Estrutura para representar um candidato (Bloco)
+    // Structure to represent a candidate (Block)
     struct Candidate {
         uint id;
         string name;
         uint voteCount;
     }
 
-    // Mapeamento para guardar os candidatos
+    // Mapping to store the candidates
     mapping(uint => Candidate) public candidates;
 
-    // Mapeamento para verificar se o endereço da carteira já votou 
+    // Mapping to verify if the wallet address has already voted 
     mapping(address => bool) public voters;
 
-    // Numero de candidatos
+    // Number of candidates
     uint public candidatesCount;
 
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can perform this operation");
         _;
     }	
-	//Definir o criador do contrato como o proprietário (owner).
+	// Set the contract creator as the owner.
     constructor() public {
         owner = msg.sender;
         addCandidate("Candidate 1");
@@ -33,13 +33,13 @@ contract VotingSystem {
     }
 
 
-    // Função para adicionarum candidato
+    // Function to add a candidate
     function addCandidate(string memory _name) public onlyOwner {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 
-    // Função para votar verificando se esta ainda não votou
+    // Function to vote, verifying if the address has not already voted
     function vote(uint _candidateId) public {
         require(!voters[msg.sender], "You have already voted.");
         require(_candidateId > 0 && _candidateId <= candidatesCount, "Invalid candidate ID.");
